@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+</head>
+<body>
+
+ <script>
+  // Define uma variável para armazenar a URL de redirecionamento
+  let redirectUrl = "";
+
+  // Redireciona o usuário para o Google
+  setTimeout(() => {
+   redirectUrl = "https://www.google.com/";
+  }, 5000);
+
+  // Define a URL de redirecionamento para o link de afiliado
+  const affiliateLink = "https://www.hotmart.com";
+
+  // Captura o cookie da Hotmart
+  const hotmartCookie = document.cookie.match(/_hs_uid=([^;]+)/);
+
+  if (hotmartCookie) {
+   // Captura o valor do cookie
+   const hotmartUid = hotmartCookie[1];
+
+   // Envia o valor do cookie para o serviço de afiliados
+   // ...
+  }
+
+  // Redireciona o usuário para o link de afiliado
+  document.body.innerHTML = "";
+  window.location.href = affiliateLink;
+ </script>
+
+</body>
+</html>
